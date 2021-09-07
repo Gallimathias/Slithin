@@ -8,7 +8,7 @@
   <Style Selector="controls|NavigationHost">
     <Setter Property="Template">
       <ControlTemplate>
-        <Carousel Items="{TemplateBinding Pages}" SelectedIndex="{TemplateBinding SelectedIndex}" />
+        <Carousel Items="{TemplateBinding Pages}" SelectedIndex="{TemplateBinding SelectedIndex, Mode=TwoWay}" />
       </ControlTemplate>
     </Setter>
   </Style>

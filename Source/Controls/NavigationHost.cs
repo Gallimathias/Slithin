@@ -8,7 +8,7 @@ namespace Slithin.Controls
     public class NavigationHost : TemplatedControl
     {
         public static StyledProperty<ObservableCollection<Control>> PagesProperty = AvaloniaProperty.Register<NavigationHost, ObservableCollection<Control>>("Pages");
-        public static StyledProperty<int> SelectedIndexProperty = AvaloniaProperty.Register<NavigationHost, int>("SelectedIndex");
+        public static StyledProperty<int> SelectedIndexProperty = AvaloniaProperty.Register<NavigationHost, int>("SelectedIndex", 0);
 
         private static NavigationHost _host;
 
@@ -34,8 +34,15 @@ namespace Slithin.Controls
             return _host == target;
         }
 
-        public static void Navigate(Control page)
+        public static void Navigate(Control page, object viewmodel = null)
         {
+            if (viewmodel != null)
+            {
+                page.DataContext = viewmodel;
+            }
+
+            _host.SelectedIndex++;
+
             _host.Pages.Add(page);
         }
 
