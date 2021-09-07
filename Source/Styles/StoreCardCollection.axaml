@@ -18,7 +18,7 @@
           <StackPanel Orientation="Horizontal" Spacing="15">
             <TextBlock Text="{TemplateBinding Category}" FontSize="22" FontWeight="Bold" Margin="3" />
 
-            <c:Link Title="More" CommandParameter="{TemplateBinding Category}" Command="{TemplateBinding MoreCommand}" VerticalAlignment="Center" />
+            <c:Link Title="More" CommandParameter="{TemplateBinding}" Command="{TemplateBinding MoreCommand}" VerticalAlignment="Center" />
           </StackPanel>
 
           <ItemsControl Items="{TemplateBinding Cards, Mode=TwoWay}" VerticalAlignment="Top">
