@@ -41,9 +41,9 @@ namespace Slithin.Controls
                 page.DataContext = viewmodel;
             }
 
-            _host.SelectedIndex++;
-
             _host.Pages.Add(page);
+
+            _host.SelectedIndex++;
         }
 
         public static void SetIsHost(NavigationHost target, bool value)
