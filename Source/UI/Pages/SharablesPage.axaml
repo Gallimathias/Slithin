@@ -8,20 +8,6 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="1500"
              x:Class="Slithin.UI.Pages.SharablesPage">
   <ScrollViewer>
-    <StackPanel Spacing="5" Margin="2">
-      <TextBlock Text="Featured" FontSize="22" FontWeight="Bold" Margin="3" />
-
-      <c:GalleryControl>
-        <Image Height="250" Source="/Resources/Cover.png" />
-        <Image Height="250" Source="/Resources/Covers/Folder-DBlue.png" />
-        <Image Height="250" Source="/Resources/Covers/Folder-Green.png" />
-        <Image Height="250" Source="/Resources/Covers/Folder-Yellow.png" />
-        <Image Height="250" Source="/Resources/Covers/Folder-Grey.png" />
-      </c:GalleryControl>
-
-      <c:StoreCardCollection Cards="{Binding Items}" Category="Templates" MoreCommand="{Binding ViewMoreCommand}" />
-      <c:StoreCardCollection Cards="{Binding Items}" Category="Tools" MoreCommand="{Binding ViewMoreCommand}" />
-      <c:StoreCardCollection Cards="{Binding Items}" Category="Notebooks" MoreCommand="{Binding ViewMoreCommand}" />
-    </StackPanel>
+    <c:NavigationHost c:NavigationHost.IsHost="True" />
   </ScrollViewer>
 </UserControl>

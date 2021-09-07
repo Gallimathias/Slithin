@@ -1,0 +1,15 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:Slithin.Controls">
+  <Design.PreviewWith>
+    <controls:NavigationHost />
+  </Design.PreviewWith>
+
+  <Style Selector="controls|NavigationHost">
+    <Setter Property="Template">
+      <ControlTemplate>
+        <Carousel Items="{TemplateBinding Pages}" SelectedIndex="{TemplateBinding SelectedIndex}" />
+      </ControlTemplate>
+    </Setter>
+  </Style>
+</Styles>
