@@ -18,7 +18,7 @@ namespace Slithin.ViewModels.Pages
         {
             ViewMoreCommand = new DelegateCommand(_ =>
             {
-                NotificationService.Show(_.ToString());
+                NavigationHost.Navigate(new CategoryPage(), _);
             });
         }
 
